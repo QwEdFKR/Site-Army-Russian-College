@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Герой и семья</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            header h1 {
+                margin: 0;
+                color: #333;
+            }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+            nav a {
+                color: #5b8850;
+                text-decoration: none;
+                font-weight: bold;
+                padding: 10px 20px;
+                background-color: #5b8850;
+                color: #fff;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+
+                nav a:hover {
+                    background-color: #4a6f42;
+                }
+
+                nav a.active {
+                    background-color: #ff0000;
+                }
+        img {
+            width: 225px;
+            height: 300px;
+            position: relative;
+            top: 0px;
+            margin-top: 25px;
+        }
+
+        .column {
+            top: 50px;
+            float: left;
+            width: 33.33%;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            text-align: left;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+            .modal-content h3 {
+                margin-top: 0;
+            }
+
+            .modal-content p {
+                margin: 5px 0;
+            }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Герой и семья</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="benefits.html">Льготы</a>
+            <a href="ourhero.html" class="active">Наши герои</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+    </header>
+    <h1 align="center">
+        <font size="6">
+            Наши герои!
+        </font>
+    </h1>
+    <p>
+        <div class="column" align="center">
+            <img src="gadgiev-170.jpg" alt="Нурмагомед Гаджимагомедов" onclick="openModal('modal1')">
+            <p><font size="5"><strong>Нурмагомед Гаджимагомедов</strong></font></p>
+        </div>
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <h3>Нурмагомед Гаджимагомедов</h3>
+                <p><strong>ФИО:</strong>Гаджимагомедов Нурмагомед Энгольсович</p>
+                <p><strong>Год рождения:</strong>29 сентября 1996 год</p>
+                <p><strong>Город:</strong>Южно-Сухокумск, Дагестан</p>
+                <p>
+                    <strong>Биография:</strong>Родился 29 сентября 1996 года в городе Южно-Сухокумске Дагестана в лакской семье. В марте 2021 года женился, есть дочь Теймия (род. 20 февраля 2022).<br />
+                    Во время учёбы занимался армейским рукопашным боем, а позже получил звание мастера спорта России. Служил в должности командира роты в составе 247-го гвардейского десантно-штурмового Кавказского казачьего полка ВДВ России с дислокацией в Ставрополе. Дважды был в длительных командировках во время военной операции России в Сирии.<br />
+                    3 марта 2022 года указом президента России Владимира Путина удостоен звания Героя Российской Федерации (посмертно) за «мужество и героизм, проявленные при исполнении воинского долга».<br />
+                    8 сентября 2022 года на пленуме Союза писателей России Гаджимагомедов принят почетным членом Союза писателей России посмертно. <br />
+                    Похоронен в родовом селе Кани. Посмертно награждён Орденом «Аль-’Иззат» («Слава, честь и достоинство») ЦДУМ России.<br />
+                </p>
+                <p><strong>Подвиги:</strong>В феврале 2022 года принимал участие в Специальной военной операции. По версии МО РФ, Гаджимагомедов был ранен, попал в окружение и подорвал себя гранатой вместе с украинскими военнослужащими.</p>
+                <p><strong>Как погиб:</strong>Самоподрыв в окружении противника (подвиг)</p>
+            </div>
+        </div>
+        <div class="column" align="center">
+            <img src="Alexey_Berngart.jpg" alt="Алексей Бернгарт" onclick="openModal('modal2')">
+            <p><font size="5"><strong>Алексей Бернгарт</strong></font></p>
+        </div>
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <h3>Алексей Бернгарт</h3>
+                <p><strong>ФИО:</strong>Бернгарт Алексей Борисович</p>
+                <p><strong>Год рождения:</strong>22 октября 1978</p>
+                <p><strong>Город:</strong>Кыра, Читинская область</p>
+                <p>
+                    <strong>Биография:</strong>Родился 22 октября 1978 года в селе Кыра Читинской области, ныне — Забайкальский край. Проживал в селе Кыра Кыринского района. В этом же селе окончил шесть классов местной средней школы. Потом вместе с семьёй проживал в Приморском крае.<br />
+                    Окончил Дальневосточное высшее общевойсковое командное училище имени Маршала Советского Союза К. К. Рокоссовского. Прошёл служебный путь от командира воздушно-десантной роты до заместителя командира бригады морской пехоты. Служил в составе 155-й отдельной бригады морской пехоты Тихоокеанского флота во Владивостоке.<br />
+                    Участвовал в военной операции России в Сирии. В последующие годы — заместитель командира 810-й отдельной гвардейской бригады морской пехоты Черноморского флота с дислокацией в Севастополе.<br />
+                    В феврале 2022 года принял участие в специальной военной операции на Украине в составе 810-й отдельной гвардейской бригады морской пехоты. Согласно заявлению Министерства обороны РФ, руководил наступательной операцией в направлении к Волновахе.<br />
+                    Указом Президента России Владимира Путина от 4 марта 2022 года за «мужество и героизм, проявленные при выполнении боевого задания» удостоен звания Героя Российской Федерации.
+                </p>
+                <p><strong>Подвиги: </strong>Руководит на одном из направлений операции на Украине</p>
+                <p><strong>Как погиб: Жив, продолжавет учавствовать в СВО.</strong> </p>
+            </div>
+        </div>
+        <div class="column" align="center">
+            <img src="02b3c8924b558befe9080.jpg" alt="Расим Ильязов" onclick="openModal('modal3')">
+            <p><font size="5"><strong>Расим Ильязов</strong></font></p>
+        </div>
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                <h3>Расим Ильязов</h3>
+                <p><strong>ФИО:</strong> </p>
+                <p><strong>Год рождения:</strong> </p>
+                <p><strong>Город:</strong> </p>
+                <p><strong>Биография:</strong> </p>
+                <p><strong>Подвиги:</strong> </p>
+                <p><strong>Как погиб:</strong> </p>
+            </div>
+        </div>
+    </p>
+    <p>
+        <div class="column" align="center">
+            <img src="Ivanov_Andrey_Andreyevich.jpg" alt="Андрей Иванов" onclick="openModal('modal4')">
+            <p><font size="5"><strong>Андрей Иванов</strong></font></p>
+        </div>
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal4')">&times;</span>
+                <h3>Андрей Иванов</h3>
+                <p><strong>ФИО:</strong> </p>
+                <p><strong>Год рождения:</strong> </p>
+                <p><strong>Город:</strong> </p>
+                <p><strong>Биография:</strong> </p>
+                <p><strong>Подвиги:</strong> </p>
+                <p><strong>Как погиб:</strong> </p>
+            </div>
+        </div>
+        <div class="column" align="center">
+            <img src="Nosov.jpg" alt="Владимир Носов" onclick="openModal('modal5')">
+            <p><font size="5"><strong>Владимир Носов</strong></font></p>
+        </div>
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal5')">&times;</span>
+                <h3>Владимир Носов</h3>
+                <p><strong>ФИО:</strong> </p>
+                <p><strong>Год рождения:</strong> </p>
+                <p><strong>Город:</strong> </p>
+                <p><strong>Биография:</strong> </p>
+                <p><strong>Подвиги:</strong> </p>
+                <p><strong>Как погиб:</strong> </p>
+            </div>
+        </div>
+        <div class="column" align="center">
+            <img src="FRZi2U904OM.jpg" alt="Тамерлан Ильшамов" onclick="openModal('modal6')">
+            <p><font size="5"><strong>Тамерлан Ильшамов</strong></font></p>
+        </div>
+        <div id="modal6" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal6')">&times;</span>
+                <h3>Тамерлан Ильшамов</h3>
+                <p><strong>ФИО:</strong> </p>
+                <p><strong>Год рождения:</strong> </p>
+                <p><strong>Город:</strong> </p>
+                <p><strong>Биография:</strong> </p>
+                <p><strong>Подвиги:</strong> </p>
+                <p><strong>Как погиб:</strong> </p>
+            </div>
+        </div>
+    </p>
+    <p>
+        <div class="column" align="center">
+            <img src="m4rbizczr9p12smnqob4m74lui42npe0.jpg" alt="Александр Белоглазов" onclick="openModal('modal7')">
+            <p><font size="5"><strong>Александр Белоглазов</strong></font></p>
+        </div>
+        <div id="modal7" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal7')">&times;</span>
+                <h3>Александр Белоглазов</h3>
+                <p><strong>ФИО:</strong> </p>
+                <p><strong>Год рождения:</strong> </p>
+                <p><strong>Город:</strong> </p>
+                <p><strong>Биография:</strong> </p>
+                <p><strong>Подвиги:</strong> </p>
+                <p><strong>Как погиб:</strong> </p>
+            </div>
+        </div>
+        <div class="column" align="center">
+            <img src="_nikAIbCakM.jpg" alt="Владимир Зозулин" onclick="openModal('modal8')">
+            <p><font size="5"><strong>Владимир Зозулин</strong></font></p>
+        </div>
+        <div id="modal8" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal8')">&times;</span>
+                <h3>Владимир Зозулин</h3>
+                <p><strong>ФИО:</strong> </p>
+                <p><strong>Год рождения:</strong> </p>
+                <p><strong>Город:</strong> </p>
+                <p><strong>Биография:</strong> </p>
+                <p><strong>Подвиги:</strong> </p>
+                <p><strong>Как погиб:</strong> </p>
+            </div>
+        </div>
+        <div class="column" align="center">
+            <img src="portret_starshego_leytenanta_peskovogo_mw-16-44986738.jpg" alt="Максим Песковой" onclick="openModal('modal9')">
+            <p><font size="5"><strong>Максим Песковой</strong></font></p>
+        </div>
+        <div id="modal9" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal9')">&times;</span>
+                <h3>Максим Песковой</h3>
+                <p><strong>ФИО:</strong> </p>
+                <p><strong>Год рождения:</strong> </p>
+                <p><strong>Город:</strong> </p>
+                <p><strong>Биография:</strong> </p>
+                <p><strong>Подвиги:</strong> </p>
+                <p><strong>Как погиб:</strong> </p>
+            </div>
+        </div>
+    </p>
+    <p>
+        <div class="column" align="center">
+            <img src="24-09-03-22n.jpg" alt="Юрий Нимченко" onclick="openModal('modal10')">
+            <p><font size="5"><strong>Юрий Нимченко</strong></font></p>
+        </div>
+        <div id="modal10" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal10')">&times;</span>
+                <h3>Юрий Нимченко</h3>
+                <p><strong>ФИО:</strong> </p>
+                <p><strong>Год рождения:</strong> </p>
+                <p><strong>Город:</strong> </p>
+                <p><strong>Биография:</strong> </p>
+                <p><strong>Подвиги:</strong> </p>
+                <p><strong>Как погиб:</strong> </p>
+            </div>
+        </div>
+        <div class="column" align="center">
+            <img src="fR8ynlOtGJs.jpg" alt="Денис Зорин" onclick="openModal('modal11')">
+            <p><font size="5"><strong>Денис Зорин</strong></font></p>
+        </div>
+        <div id="modal11" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal11')">&times;</span>
+                <h3>Денис Зорин</h3>
+                <p><strong>ФИО:</strong> </p>
+                <p><strong>Год рождения:</strong> </p>
+                <p><strong>Город:</strong> </p>
+                <p><strong>Биография:</strong> </p>
+                <p><strong>Подвиги:</strong> </p>
+                <p><strong>Как погиб:</strong> </p>
+            </div>
+        </div>
+        <div class="column" align="center">
+            <img src="i.jpg" alt="Денис Шишов" onclick="openModal('modal12')">
+            <p><font size="5"><strong>Денис Шишов</strong></font></p>
+        </div>
+        <div id="modal12" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal12')">&times;</span>
+                <h3>Денис Шишов</h3>
+                <p><strong>ФИО:</strong> </p>
+                <p><strong>Год рождения:</strong> </p>
+                <p><strong>Город:</strong> </p>
+                <p><strong>Биография:</strong> </p>
+                <p><strong>Подвиги:</strong> </p>
+                <p><strong>Как погиб:</strong> </p>
+            </div>
+        </div>
+    </p>
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = "flex";
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Герой и семья</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f1f1f1;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+            nav a {
+                color: #5b8850;
+                text-decoration: none;
+                font-weight: bold;
+                padding: 10px 20px;
+                background-color: #5b8850;
+                color: #fff;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+
+                nav a:hover {
+                    background-color: #4a6f42;
+                }
+
+                nav a.active {
+                    background-color: #ff0000;
+                }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            width: 300px; /* Установлен фиксированный размер для каждого элемента */
+            margin-bottom: 20px;
+        }
+
+            .service-item img {
+                width: 90px;
+                height: 90px; /* Квадратный размер изображений */
+                object-fit: cover;
+                border-radius: 10px;
+            }
+
+            .service-item p {
+                margin: 0;
+                font-size: 16px;
+                color: #333;
+            }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 5px;
+            gap: 20px;
+        }
+
+        .service-item {
+            flex: 1 1 45%;
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #5bcc50;
+            border: none;
+            border-radius: 25px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            transition: background-color 0.3s;
+        }
+            button:hover{
+                background-color: #4abb40;
+            }
+
+            button img {
+                width: 70px;
+                height: 70px;
+                margin-right: 15px;
+            }
+
+            button span {
+                color: black;
+                font-size: 18px;
+            }
+
+        .contact-section {
+            width: 100%;
+            background-color: #e0e0e0;
+            padding: 20px 0;
+            text-align: center;
+            color: #333;
+            margin-top: auto;
+        }
+
+            .contact-section h3 {
+                margin-top: 0;
+                font-size: 20px;
+            }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+            .contact-info div {
+                font-size: 16px;
+            }
+
+        .footer-text {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body link="black" vlink="black" alink="black" >
+    <header>
+        <h1>Герой и семья</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="benefits.html" class="active">Льготы</a>
+            <a href="ourhero.html">Наши герои</a>
+            <a href="contacts.html">Контакты</a>
+        </nav>
+    </header>
+    <h1 align="center">
+        <font size="10">
+            МЕРЫ ПОДДЕРЖКИ СЕМЕЙ И БЛИЗКИХ УЧАСТНИКОВ СВО
+        </font>
+    </h1>
+    <hr />
+    <div class="services">
+        <div class="service-item">
+            <button class="dpob">
+                <img src="online-learning.png" alt="dpob">
+                <span><font color="black">Обучение и дополнительное образование семей участников СВО</font></span>
+            </button>
+        </div>
+        <div class="service-item">
+            <button class="med">
+                <img src="stethoscope.png" alt="med">
+                <span><font color="black">Бесплатное медициское обслуживание</font></span>
+            </button>
+        </div>
+    </div>
+    <div class="services">
+        <div class="service-item">
+            <button class="rdom">
+                <img src="paintwork.png">
+                <span><font color="black">Выплата средств на ремонт частного дома</font></span>
+            </button>
+        </div>
+        <div class="service-item">
+            <button class="put">
+                <img src="tickets.png" alt="put">
+                <span><font color="black">Обеспечение путёвками на лечение в санатории и базы отдыха</font></span>
+            </button>
+        </div>
+    </div>
+    <div class="services">
+        <div class="service-item">
+            <button class="vplt">
+                <img src="hand.png" alt="payment">
+                <span><font color="black">Единовременная выплата семьям погибших участников СВО</font></span>
+            </button>
+        </div>
+        <div class="service-item">
+            <button class="urpm">
+                <img src="law.png" alt="urpm">
+                <span><font color="black">Бесплатная юридическая помощь участникам СВО и их семьям</font></span>
+            </button>
+        </div>
+    </div>
+    <p>
+        <div class="contact-section">
+            <h3>Контакты разработчиков</h3>
+            <div class="contact-info">
+                <div>Иван Иванов - ivanov@example.com</div>
+                <div>Мария Смирнова - smirnova@example.com</div>
+                <div>Алексей Кузнецов - kuznetcov@example.com</div>
+                <div>Ольга Петрова - petrova@example.com</div>
+                <div>Дмитрий Соколов - sokolov@example.com</div>
+            </div>
+            <div class="footer-text">Пенза - КТ ПензГТУ</> - 2024</div>
+        </div>
+    </p>
+</body>
+</html>
