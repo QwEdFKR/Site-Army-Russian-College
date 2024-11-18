@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Герой и семья</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f0f0f0;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            color: #333;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: #5b8850;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            background-color: #5b8850;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #4a6f42;
+        }
+        nav a.active {
+            background-color: #ff0000;
+        }
+        .banner {
+            background-image: url('banner.jpg'); 
+            background-size: cover;
+            background-position: center;
+            padding: 99px 20px;
+            text-align: center;
+            color: #fff;
+        }
+        .banner h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+        .banner button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #5b8850;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .banner button:hover {
+            background-color: #4a6f42;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+        }
+        .content img {
+            max-width: 350px;
+            height: auto;
+        }
+        .left {
+            flex: 1;
+        }
+        .right {
+            background-image: url('banner1.jpeg');
+            width: 1320px;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            width: 300px; /* Установлен фиксированный размер для каждого элемента */
+            margin-bottom: 20px;
+        }
+        .service-item img {
+            width: 60px;
+            height: 60px; /* Квадратный размер изображений */
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .service-item p {
+            margin: 0;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+<body link="white" alink="white" vlink="white">
+<header>
+    <h1>Герой и семья</h1>
+    <nav>
+        <a href="index.html" class="active">Главная</a>
+        <a href="benefits.html">Льготы</a>
+        <a href="ourhero.html">Наши герои</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+</header>
+
+<section class="banner">
+    <h1>Почёт защитникам, забота их близким</h1>
+    <form action="benefits.html">
+        <button>Смотреть льготы</button>
+    </form>
+</section>
+
+<div class="content">
+    <div class="left">
+        <img src="cheba.png" alt="Чебурашка в военной форме"> <!-- Замените на путь к изображению cheba.png -->
+    </div>
+    <div class="right">
+        <a href="ourhero.html" style="text-decoration: none;">
+            <font color="FFFFFF">
+                <h2>Герои спецоперации</h2>
+                <p>Нельзя читать и комментировать, когда наша семья и Отечество в опасности...</p>
+            </font>
+        </a>
+    </div>
+</div>
+
+<div class="services">
+    <div class="service-item">
+        <a href="benefits.html">
+            <img src="social-support-icon.jpg" alt="Социальная поддержка"> <!-- Замените на путь к иконке -->
+            <p>Содействие в оформлении социальных и иных выплат, социальной поддержки, на получение которой имеет право семья</p>
+        </a>
+    </div>
+    <div class="service-item">
+        <img src="psych-support-icon.jpg" alt="Психологическая помощь"> <!-- Замените на путь к иконке -->
+        <a href="benefits.html">
+            <p>Оказание психологической помощи</p>
+        </a>
+    </div>
+    <div class="service-item">
+        <img src="legal-consulting-icon.png" alt="Юридическое консультирование"> <!-- Замените на путь к иконке -->
+        <a href="benefits.html">
+            <p>Консультирование по юридическим вопросам</p>
+        </a>
+    </div>
+    <div class="service-item">
+        <img src="info-icon.png" alt="Справочная информация"> <!-- Замените на путь к иконке -->
+        <a href="benefits.html">
+            <p>Предоставление необходимой справочной информации о работе городских сервисов и о действующих мерах социальной поддержки</p>
+        </a>
+    </div>
+    <div class="service-item">
+        <img src="pension-icon.png" alt="Пенсия по потере кормильца"> <!-- Замените на путь к иконке -->
+        <a href="benefits.html">
+            <p>Выплата членам семьи пенсии по потере кормильца в размере 50% от денежного довольствия военнослужащего для участников СВО</p>
+        </a>
+    </div>
+</div>
+</body>
+</html>
