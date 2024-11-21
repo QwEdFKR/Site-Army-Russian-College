@@ -1,213 +1,151 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Герой и семья</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #f0f0f0;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-            header h1 {
-                margin: 0;
-                color: #333;
-            }
-
-        nav {
-            display: flex;
-            gap: 15px;
-        }
-
-            nav a {
-                color: #5b8850;
-                text-decoration: none;
-                font-weight: bold;
-                padding: 10px 20px;
-                background-color: #5b8850;
-                color: #fff;
-                border-radius: 5px;
-                transition: background-color 0.3s;
-            }
-
-                nav a:hover {
-                    background-color: #4a6f42;
-                }
-
-                nav a.active {
-                    background-color: #ff0000;
-                }
-        img {
-            width: 225px;
-            height: 300px;
-            position: relative;
-            top: 0px;
-            margin-top: 25px;
-        }
-
-        .column {
-            top: 50px;
-            float: left;
-            width: 33.33%;
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .modal-content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            width: 400px;
-            text-align: left;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-
-            .modal-content h3 {
-                margin-top: 0;
-            }
-
-            .modal-content p {
-                margin: 5px 0;
-            }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-            .close:hover,
-            .close:focus {
-                color: black;
-                text-decoration: none;
-            }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <div class="wrapper">
     <header>
         <h1>Герой и семья</h1>
         <nav>
             <a href="index.html">Главная</a>
-            <a href="benefits.html">Льготы</a>
+            <a href="benefits.html" >Льготы</a>
             <a href="ourhero.html" class="active">Наши герои</a>
-            <a href="contacts.html">Контакты</a>
+            <a href="contact.html">Контакты</a>
         </nav>
     </header>
-    <h1 align="center">
-        <font size="6">
-            Наши герои!
-        </font>
-    </h1>
-    <p>
-        <div class="column" align="center">
-            <img src="gadgiev-170.jpg" alt="Нурмагомед Гаджимагомедов" onclick="openModal('modal1')">
-            <p><font size="5"><strong>Нурмагомед Гаджимагомедов</strong></font></p>
+    <main>
+        <div class="quote">
+        <h1>НАШИ ГЕРОИ!</h1></div>
+        <div class="quote-line"></div>
+        <div class="quote-container">
+            <div class="left-container">
+                <span class="big-quotes-left">❞</span>
+                <p class="quote-text">Ребята выполняют важнейшую задачу с точки зрения обеспечения безопасности самой России, и, конечно, они заслуживают того, чтобы о них говорила и знала страна. Я думаю, что и песни надо слагать, и стихи писать, и памятники им ставить. Они – герои.</p>
+                <span class="big-quotes-right">❞</span>
+            </div>
+            <div class="right-container">
+                <p class="author">— Президент Российской Федерации,Владимир Владимирович Путин</p>
+            </div>
         </div>
-        <div id="modal1" class="modal">
+        <div class="quote-line"></div>
+        
+        <div class="container">
+            <div class="column">
+                <!-- 1 герои -->
+            <div class="hero_img">
+                <img src="img/hero_img/Nurmagomed_Gadzhimagomedov.jpg" alt="Нурмагомед Гаджимагомедов" onclick="openModal('modal1')">
+            </div>
+            <p><strong class="hero-name">Нурмагомед Гаджимагомедов</strong></p>
+        </div>
+        
+        <div id="modal1" class="modal" onclick="closeOnOverlayClick(event, 'modal1')">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('modal1')">&times;</span>
                 <h3>Нурмагомед Гаджимагомедов</h3>
                 <p><strong>ФИО:</strong> Гаджимагомедов Нурмагомед Энгольсович</p>
-                <p><strong>Год рождения:</strong>29 сентября 1996 год</p>
-                <p><strong>Город:</strong>Южно-Сухокумск, Дагестан</p>
+                <p><strong>Год рождения:</strong> 29 сентября 1996 год</p>
+                <p><strong>Город:</strong> Южно-Сухокумск, Дагестан</p>
                 <p>
-                    <strong>Биография:</strong>Родился 29 сентября 1996 года в городе Южно-Сухокумске Дагестана в лакской семье. В марте 2021 года женился, есть дочь Теймия (род. 20 февраля 2022).<br />
+                    <strong>Биография:</strong> Родился 29 сентября 1996 года в городе Южно-Сухокумске Дагестана в лакской семье. В марте 2021 года женился, есть дочь Теймия (род. 20 февраля 2022).<br />
                     Во время учёбы занимался армейским рукопашным боем, а позже получил звание мастера спорта России. Служил в должности командира роты в составе 247-го гвардейского десантно-штурмового Кавказского казачьего полка ВДВ России с дислокацией в Ставрополе. Дважды был в длительных командировках во время военной операции России в Сирии.<br />
                     3 марта 2022 года указом президента России Владимира Путина удостоен звания Героя Российской Федерации (посмертно) за «мужество и героизм, проявленные при исполнении воинского долга».<br />
                     8 сентября 2022 года на пленуме Союза писателей России Гаджимагомедов принят почетным членом Союза писателей России посмертно. <br />
                     Похоронен в родовом селе Кани. Посмертно награждён Орденом «Аль-’Иззат» («Слава, честь и достоинство») ЦДУМ России.<br />
                 </p>
-                <p><strong>Подвиги:</strong>В феврале 2022 года принимал участие в Специальной военной операции. По версии МО РФ, Гаджимагомедов был ранен, попал в окружение и подорвал себя гранатой вместе с украинскими военнослужащими.</p>
-                <p><strong>Как погиб:</strong>Самоподрыв в окружении противника (подвиг)</p>
+                <p><strong>Подвиги:</strong> В феврале 2022 года принимал участие в Специальной военной операции. По версии МО РФ, Гаджимагомедов был ранен, попал в окружение и подорвал себя гранатой вместе с украинскими военнослужащими.</p>
+                <p><strong>Как погиб:</strong> Самоподрыв в окружении противника (подвиг)</p>
             </div>
         </div>
-        <div class="column" align="center">
-            <img src="Alexey_Berngart.jpg" alt="Алексей Бернгарт" onclick="openModal('modal2')">
-            <p><font size="5"><strong>Алексей Бернгарт</strong></font></p>
+        
+        <!-- 2герои -->
+            <div class="column">
+    <div class="hero_img">
+        <img src="img/hero_img/Alexey_Berngart.jpg" alt="Алексей Бернгарт" onclick="openModal('modal2')">
+    </div>
+    <p><strong class="hero-name">Алексей Бернгарт</strong></p>
+</div>
+
+<div id="modal2" class="modal" onclick="closeOnOverlayClick(event, 'modal2')">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <h3>Алексей Бернгарт</h3>
+        <p><strong>ФИО:</strong> Алексей Бернгарт</p>
+        <p><strong>Год рождения:</strong> 22 октября 1978 год</p>
+        <p><strong>Город:</strong> Кыра, Читинская область</p>
+        <p>
+            <strong>Биография:</strong> Родился 22 октября 1978 года в селе Кыра Читинской области, ныне — Забайкальский край. Проживал в селе Кыра Кыринского района. В этом же селе окончил шесть классов местной средней школы. Потом вместе с семьёй проживал в Приморском крае.<br />
+            Окончил Дальневосточное высшее общевойсковое командное училище имени Маршала Советского Союза К. К. Рокоссовского. Прошёл служебный путь от командира воздушно-десантной роты до заместителя командира бригады морской пехоты. Служил в составе 155-й отдельной бригады морской пехоты Тихоокеанского флота во Владивостоке.<br />
+            Участвовал в военной операции России в Сирии. В последующие годы — заместитель командира 810-й отдельной гвардейской бригады морской пехоты Черноморского флота с дислокацией в Севастополе.<br />
+            В феврале 2022 года принял участие в специальной военной операции на Украине в составе 810-й отдельной гвардейской бригады морской пехоты. Согласно заявлению Министерства обороны РФ, руководил наступательной операцией в направлении к Волновахе.<br />
+            Указом Президента России Владимира Путина от 4 марта 2022 года за «мужество и героизм, проявленные при выполнении боевого задания» удостоен звания Героя Российской Федерации.
+        </p>
+        <p><strong>Подвиги:</strong> Руководит на одном из направлений операции на Украине</p>
+        <p><strong>Как погиб:</strong> Жив, продолжает участвовать в СВО.</p>
+    </div>
+</div>
+
+<!-- 3 герои -->
+<div class="column" align="center">
+    <div class="hero_img">
+        <img src="img/hero_img/Rasim_Ilyazov.jpg" alt="Расим Ильязов" onclick="openModal('modal3')">
+    </div>
+    <p><strong class="hero-name">Расим Ильязов</strong></p>
+</div>
+
+<div id="modal3" class="modal" onclick="closeOnOverlayClick(event, 'modal3')">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <h3>Расим Ильязов</h3>
+        <p><strong>ФИО:</strong> Расим Ильязов</p>
+        <p><strong>Год рождения:</strong> Нет информации</p>
+        <p><strong>Город:</strong> Нет информации</p>
+        <p>
+        <strong>Биография:</strong> (Нет информации)</strong> с февраля 2022 года учавствует в специальной военной операции на Украине.</p>
+        <p><strong>Подвиги:</strong>Под его точным руководством подчиняемая батальенно-тактическая группа сдержала 8 атак противника и начала контрнаступление, отбросив противника на 5 км от важной точки</p>
+        <p><strong>Как погиб: Жив, продолжает учавстовать в СВО</strong></p>
+    </div>
+</div>
+<!-- 4 герои -->
+    <div class="column" align="center">
+        <div class="hero_img">
+            <img src="img/hero_img/Ivanov_Andrey_Andreyevich.jpg" alt="Андрей Иванов" onclick="openModal('modal4')">
         </div>
-        <div id="modal2" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('modal2')">&times;</span>
-                <h3>Алексей Бернгарт</h3>
-                <p><strong>ФИО:</strong> Бернгарт Алексей Борисович</p>
-                <p><strong>Год рождения:</strong>22 октября 1978</p>
-                <p><strong>Город:</strong>Кыра, Читинская область</p>
-                <p>
-                    <strong>Биография:</strong>Родился 22 октября 1978 года в селе Кыра Читинской области, ныне — Забайкальский край. Проживал в селе Кыра Кыринского района. В этом же селе окончил шесть классов местной средней школы. Потом вместе с семьёй проживал в Приморском крае.<br />
-                    Окончил Дальневосточное высшее общевойсковое командное училище имени Маршала Советского Союза К. К. Рокоссовского. Прошёл служебный путь от командира воздушно-десантной роты до заместителя командира бригады морской пехоты. Служил в составе 155-й отдельной бригады морской пехоты Тихоокеанского флота во Владивостоке.<br />
-                    Участвовал в военной операции России в Сирии. В последующие годы — заместитель командира 810-й отдельной гвардейской бригады морской пехоты Черноморского флота с дислокацией в Севастополе.<br />
-                    В феврале 2022 года принял участие в специальной военной операции на Украине в составе 810-й отдельной гвардейской бригады морской пехоты. Согласно заявлению Министерства обороны РФ, руководил наступательной операцией в направлении к Волновахе.<br />
-                    Указом Президента России Владимира Путина от 4 марта 2022 года за «мужество и героизм, проявленные при выполнении боевого задания» удостоен звания Героя Российской Федерации.
-                </p>
-                <p><strong>Подвиги: </strong>Руководит на одном из направлений операции на Украине</p>
-                <p><strong>Как погиб: Жив, продолжавет учавствовать в СВО.</strong> </p>
+        <p><strong class="hero-name">Андрей Иванов</strong></p>
+    </div>
+    
+    <div id="modal4" class="modal" onclick="closeOnOverlayClick(event, 'modal4')">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h3>Андрей Иванов</h3>
+            <p><strong>ФИО: </strong>Иванов Андрей Юрьевич</p>
+            <p><strong>Год рождения: </strong>13 июля 1967</p>
+            <p><strong>Город:</strong> дер. Задорожье, Псовская область</p>
+            <p>
+                <strong>Биография:</strong> Родился в селе Задорожье Островского района Псковской области РСФСР в семье офицера. Окончил среднюю школу в Литовской ССР по месту службы отца. Служит Вооружённых Силах с 1985 года. Окончил Рязанское высшее воздушно-десантное командное училище имени Ленинского Комсомола в 1989 году. <br />
+                Служил в Воздушно-десантных войсках сначала в Омске, затем в 119-м гвардейском парашютно-десантном полку 106-й гвардейской воздушно-десантной дивизии (полк дислоцируется в Наро-Фоминске).<br />
+            </p>
+            <p><strong>Подвиги:</strong> В составе одного из контингентов принял ожесточённые бои и смог защитить ключевую точку, за что позже получил медаль "Герой России".</p>
+            <p><strong>Как погиб: Жив, учавствует в СВО.</strong> </p>
+        </div>
+    </div>
+<!-- 5 герои -->
+
+    <div class="container">
+        <div class="column" align="center">
+            <div class="hero_img">
+                <img src="img/hero_img/Vladimir_Nosov.jpg" alt="Владимир Носов" onclick="openModal('modal5')">
             </div>
+            <p><strong class="hero-name">Владимир Носов</strong></p>
         </div>
-        <div class="column" align="center">
-            <img src="02b3c8924b558befe9080.jpg" alt="Расим Ильязов" onclick="openModal('modal3')">
-            <p><font size="5"><strong>Расим Ильязов</strong></font></p>
-        </div>
-        <div id="modal3" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('modal3')">&times;</span>
-                <h3>Расим Ильязов</h3>
-                <p><strong>ФИО: Расим Ильязов ***</strong> </p>
-                <p><strong>Год рождения: Нет информации</strong> </p>
-                <p><strong>Город: Нет информации</strong> </p>
-                <p><strong>Биография: (Нет информации)</strong> с февраля 2022 года учавствует в специальной военной операции на Украине.</p>
-                <p><strong>Подвиги:</strong>Под его точным руководством подчиняемая батальенно-тактическая группа сдержала 8 атак противника и начала контрнаступление, отбросив противника на 5 км от важной точки</p>
-                <p><strong>Как погиб: Жив, продолжает учавстовать в СВО</strong></p>
-            </div>
-        </div>
-    </p>
-    <p>
-        <div class="column" align="center">
-            <img src="Ivanov_Andrey_Andreyevich.jpg" alt="Андрей Иванов" onclick="openModal('modal4')">
-            <p><font size="5"><strong>Андрей Иванов</strong></font></p>
-        </div>
-        <div id="modal4" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('modal4')">&times;</span>
-                <h3>Андрей Иванов</h3>
-                <p><strong>ФИО: </strong>Иванов Андрей Юрьевич</p>
-                <p><strong>Год рождения: </strong>13 июля 1967</p>
-                <p><strong>Город:</strong> дер. Задорожье, Псовская область</p>
-                <p>
-                    <strong>Биография:</strong> Родился в селе Задорожье Островского района Псковской области РСФСР в семье офицера. Окончил среднюю школу в Литовской ССР по месту службы отца. Служит Вооружённых Силах с 1985 года. Окончил Рязанское высшее воздушно-десантное командное училище имени Ленинского Комсомола в 1989 году. <br />
-                    Служил в Воздушно-десантных войсках сначала в Омске, затем в 119-м гвардейском парашютно-десантном полку 106-й гвардейской воздушно-десантной дивизии (полк дислоцируется в Наро-Фоминске).<br />
-                </p>
-                <p><strong>Подвиги:</strong> В составе одного из контингентов принял ожесточённые бои и смог защитить ключевую точку, за что позже получил медаль "Герой России".</p>
-                <p><strong>Как погиб: Жив, учавствует в СВО.</strong> </p>
-            </div>
-        </div>
-        <div class="column" align="center">
-            <img src="Nosov.jpg" alt="Владимир Носов" onclick="openModal('modal5')">
-            <p><font size="5"><strong>Владимир Носов</strong></font></p>
-        </div>
-        <div id="modal5" class="modal">
+        
+        <div id="modal5" class="modal" onclick="closeOnOverlayClick(event, 'modal5')">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('modal5')">&times;</span>
                 <h3>Владимир Носов</h3>
@@ -223,14 +161,21 @@
                 <p><strong>Как погиб:</strong> Погиб в бою (смертельное ранение)</p>
             </div>
         </div>
-        <div class="column" align="center">
-            <img src="FRZi2U904OM.jpg" alt="Тамерлан Ильгамов" onclick="openModal('modal6')">
-            <p><font size="5"><strong>Тамерлан Ильгамов</strong></font></p>
-        </div>
-        <div id="modal6" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('modal6')">&times;</span>
-                <h3>Тамерлан Ильгамов</h3>
+
+<!-- 6 герои -->
+
+        <div class="container">
+            <div class="column" align="center">
+                <div class="hero_img">
+                    <img src="img/hero_img/Tamerlan_Ilgamov.jpg" alt="Тамерлан Ильгамов" onclick="openModal('modal6')">
+                </div>
+                <p><strong class="hero-name">Ильгамов Тамерлан</strong></p>
+            </div>
+            
+            <div id="modal6" class="modal" onclick="closeOnOverlayClick(event, 'modal6')">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal6')">&times;</span>
+                    <h3>Тамерлан Ильгамов</h3>
                 <p><strong>ФИО:</strong> Ильгамов Тамерлан Айсарович</p>
                 <p><strong>Год рождения:</strong> 22 июня 1994</p>
                 <p><strong>Город:</strong> с. Аскарово, Респ. Башкортостан</p>
@@ -241,17 +186,20 @@
                 <p><strong>Подвиги:</strong> С 24 февраля 2022 года в составе своего подразделения принимал участие во вторжении России на Украину. Согласно заявлениям российских СМИ, Ильгамов сбил 9 ракет противника, а 2 ракеты попали в ЗРК, что привело к гибели Ильгамова и его сослуживцев</p>
                 <p><strong>Как погиб:</strong> Погиб при исполнении воинского долга</p>
             </div>
-        </div>
-    </p>
-    <p>
-        <div class="column" align="center">
-            <img src="m4rbizczr9p12smnqob4m74lui42npe0.jpg" alt="Александр Белоглазов" onclick="openModal('modal7')">
-            <p><font size="5"><strong>Александр Белоглазов</strong></font></p>
-        </div>
-        <div id="modal7" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('modal7')">&times;</span>
-                <h3>Александр Белоглазов</h3>
+            </div>
+          <!-- 7 герои -->
+          <div class="container">
+            <div class="column" align="center">
+                <div class="hero_img">
+                    <img src="img/hero_img/Alexander_Beloglazov.jpg" alt="Александр Белоглазов" onclick="openModal('modal7')">
+                </div>
+                <p><strong class="hero-name">Александр Белоглазов</strong></p>
+            </div>
+            
+            <div id="modal7" class="modal" onclick="closeOnOverlayClick(event, 'modal7')">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal7')">&times;</span>
+                    <h3>Александр Белоглазов</h3>
                 <p><strong>ФИО:</strong> Белоглазов Александр Михайлович</p>
                 <p><strong>Год рождения:</strong> 29 января 1978</p>
                 <p><strong>Город:</strong> Большой Край, Саратовская область</p>
@@ -264,35 +212,46 @@
                 <p><strong>Подвиги:</strong> получил медаль "Герой России" за заслуги перед отечеством в виде обучения солдат и внутреведомственных организаций.</p>
                 <p><strong>Как погиб: Жив, служит, обучая новые кадры.</strong> </p>
             </div>
-        </div>
-        <div class="column" align="center">
-            <img src="nikAIbCakM.jpg" alt="Владимир Зозулин" onclick="openModal('modal8')">
-            <p><font size="5"><strong>Владимир Зозулин</strong></font></p>
-        </div>
-        <div id="modal8" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('modal8')">&times;</span>
-                <h3>Владимир Зозулин</h3>
-                <p><strong>ФИО:</strong> Зозулин Владимир Николаевич</p>
-                <p><strong>Год рождения:</strong> 24 марта 1991</p>
-                <p><strong>Город:</strong> пос. Азери, Ида-Вирумаа</p>
-                <p>
-                    <strong>Биография:</strong> Родился 24 марта 1991 года в посёлке Азери Ляэне-Вируского уезда Эстонской ССР (ныне — волости Виру-Нигула уезда Ляэне-Вирумаа Эстонской Республики), но детство и юность провёл в Вологодской области.<br />
-                    В 2008 году окончил среднюю школу в селе Борисово-Судское Бабаевского района. По окончании школы поступил, а в 2013 году окончил Рязанское гвардейское высшее воздушно-десантное командное училище имени генерала армии В. Ф. Маргелова (РВВДКУ).<br />
-                    После окончания РВВДКУ служил в 217-м гвардейском парашютно-десантном Ивановском полку 98-й гвардейской воздушно-десантной Свирской дивизии в городе Иваново, где стал командиром разведывательной роты.<br />
-                </p>
-                <p><strong>Подвиги:</strong> Учавствовал в разведовательных операциях с самого начала СВО. В послдней своей вылазке погиб в бою.</p>
-                <p><strong>Как погиб:</strong> Погиб при исполнении воинского долга.</p>
             </div>
+    <!-- 8 герои -->
+
+    <div class="container">
+            <div class="column" align="center">
+                <div class="hero_img">
+                    <img src="img/hero_img/Vladimir_Zozulin.jpg" alt="Владимир Зозулин" onclick="openModal('modal8')">
+                </div>
+                <p><strong class="hero-name">Владимир Зозулин</strong></p>
+            </div>
+            
+            <div id="modal8" class="modal" onclick="closeOnOverlayClick(event, 'modal8')">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal8')">&times;</span>
+                    <h3>Владимир Зозулин</h3>
+                    <p><strong>ФИО:</strong> Зозулин Владимир Николаевич</p>
+                    <p><strong>Год рождения:</strong> 24 марта 1991</p>
+                    <p><strong>Город:</strong> пос. Азери, Ида-Вирумаа</p>
+                    <p>
+                        <strong>Биография:</strong> Родился 24 марта 1991 года в посёлке Азери Ляэне-Вируского уезда Эстонской ССР (ныне — волости Виру-Нигула уезда Ляэне-Вирумаа Эстонской Республики), но детство и юность провёл в Вологодской области.<br />
+                        В 2008 году окончил среднюю школу в селе Борисово-Судское Бабаевского района. По окончании школы поступил, а в 2013 году окончил Рязанское гвардейское высшее воздушно-десантное командное училище имени генерала армии В. Ф. Маргелова (РВВДКУ).<br />
+                        После окончания РВВДКУ служил в 217-м гвардейском парашютно-десантном Ивановском полку 98-й гвардейской воздушно-десантной Свирской дивизии в городе Иваново, где стал командиром разведывательной роты.<br />
+                    </p>
+                    <p><strong>Подвиги:</strong> Учавствовал в разведовательных операциях с самого начала СВО. В послдней своей вылазке погиб в бою.</p>
+                    <p><strong>Как погиб:</strong> Погиб при исполнении воинского долга.</p>
+                </div>
+            </div>
+   <!-- 9 герои -->
+   <div class="container">
+    <div class="column" align="center">
+        <div class="hero_img">
+            <img src="img/hero_img/Maxim_Peskovoy.jpg" alt="Максим Песковой" onclick="openModal('modal9')">
         </div>
-        <div class="column" align="center">
-            <img src="portret_starshego_leytenanta_peskovogo_mw-16-44986738.jpg" alt="Максим Песковой" onclick="openModal('modal9')">
-            <p><font size="5"><strong>Максим Песковой</strong></font></p>
-        </div>
-        <div id="modal9" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('modal9')">&times;</span>
-                <h3>Максим Песковой</h3>
+        <p><strong class="hero-name">Максим Песковой</strong></p>
+    </div>
+    
+    <div id="modal9" class="modal" onclick="closeOnOverlayClick(event, 'modal9')">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal9')">&times;</span>
+            <h3>Максим Песковой</h3>
                 <p><strong>ФИО:</strong> Песковой Максим Владимирович</p>
                 <p><strong>Год рождения:</strong> 7 октября 1995</p>
                 <p><strong>Город:</strong> Род. в Украине. Жил в Томске, Россия.</p>
@@ -304,14 +263,17 @@
                 <p><strong>Подвиги:</strong> Активно учавствовал в боевых действиях, за что и был награждён посмертно.</p>
                 <p><strong>Как погиб:</strong> Погиб при исполнении воинского долга.</p>
             </div>
-        </div>
-    </p>
-    <p>
+    </div>
+       <!-- 10 герои -->
+       <div class="container">
         <div class="column" align="center">
-            <img src="24-09-03-22n.jpg" alt="Юрий Нимченко" onclick="openModal('modal10')">
-            <p><font size="5"><strong>Юрий Нимченко</strong></font></p>
+            <div class="hero_img">
+                <img src="img/hero_img/Yuri_Nimchenko.jpg" alt="Юрий Нимченко" onclick="openModal('modal10')">
+            </div>
+            <p><strong class="hero-name">Юрий Нимченко</strong></p>
         </div>
-        <div id="modal10" class="modal">
+        
+        <div id="modal10" class="modal" onclick="closeOnOverlayClick(event, 'modal10')">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('modal10')">&times;</span>
                 <h3>Юрий Нимченко</h3>
@@ -329,14 +291,19 @@
                 <p><strong>Как погиб: Жив, занимает депутатскую должность.</strong> </p>
             </div>
         </div>
-        <div class="column" align="center">
-            <img src="fR8ynlOtGJs.jpg" alt="Денис Зорин" onclick="openModal('modal11')">
-            <p><font size="5"><strong>Денис Зорин</strong></font></p>
-        </div>
-        <div id="modal11" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('modal11')">&times;</span>
-                <h3>Денис Зорин</h3>
+        <!-- 11 герои -->
+        <div class="container">
+            <div class="column" align="center">
+                <div class="hero_img">
+                    <img src="img/hero_img/Denis_Zorin.jpg" alt="Денис Зорин" onclick="openModal('modal11')">
+                </div>
+                <p><strong class="hero-name">Денис Зорин</strong></p>
+            </div>
+            
+            <div id="modal11" class="modal" onclick="closeOnOverlayClick(event, 'modal11')">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal11')">&times;</span>
+                    <h3>Денис Зорин</h3>
                 <p><strong>ФИО:</strong> Зорин Денис Игоревич</p>
                 <p><strong>Год рождения:</strong> 29 декабря 1991</p>
                 <p><strong>Город:</strong> Суровикино, Волгоградская обл.</p>
@@ -349,15 +316,20 @@
                 <p><strong>Подвиги:</strong> Доблестно сражался на территории Новой Каховки Херсонской области в результате одной из битв он погиб.</p>
                 <p><strong>Как погиб:</strong> Погиб при исполнении воинского долга.</p>
             </div>
-        </div>
-        <div class="column" align="center">
-            <img src="i.jpg" alt="Денис Шишов" onclick="openModal('modal12')">
-            <p><font size="5"><strong>Денис Шишов</strong></font></p>
-        </div>
-        <div id="modal12" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('modal12')">&times;</span>
-                <h3>Денис Шишов</h3>
+            </div>
+            <!-- 12 герои -->
+            <div class="container">
+                <div class="column" align="center">
+                    <div class="hero_img">
+                        <img src="img/hero_img/Denis_Shishov.jpg" alt="Денис Шишов" onclick="openModal('modal12')">
+                    </div>
+                    <p><strong class="hero-name">Денис Шишов</strong></p>
+                </div>
+                
+                <div id="modal12" class="modal" onclick="closeOnOverlayClick(event, 'modal12')">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal12')">&times;</span>
+                        <h3>Денис Шишов</h3>
                 <p><strong>ФИО:</strong> Шишов Денис Николаевич</p>
                 <p><strong>Год рождения:</strong> 29 октября 1980</p>
                 <p><strong>Город:</strong> Рукла, Литовская ССР</p>
@@ -372,15 +344,23 @@
                 <p><strong>Подвиги:</strong>  Доблестно сражался на территории Каховки Херсонской области, где получил тяжелое ранение.</p>
                 <p><strong>Как погиб: Жив</strong> получил тяжёлое ранение, поэтому временно находится в больнице</p>
             </div>
+                </div>
+    </main>
+    <div class="footer">
+        <div class="contact-section">
+            <h3>Контакты разработчиков</h3>
+            <div class="contact-info">
+                <div><a href="">Гусева Елизавета</a></div>
+                <div><a href="">Кахтюрина Елизавета</a></div>
+                <div><a href="">Акулина Мария</a></div>
+                <div><a href="">Егоров Александр</a></div>
+                <div><a href="">Дмитрий Полубесов</a></div>
+            </div>
+            <div class="footer-text">Пенза - КТ ПензГТУ - 2024</div>
         </div>
-    </p>
-    <script>
-        function openModal(id) {
-            document.getElementById(id).style.display = "flex";
-        }
-        function closeModal(id) {
-            document.getElementById(id).style.display = "none";
-        }
-    </script>
+    </div>
+</div>
+<script src="script.js"></script>
+
 </body>
 </html>
